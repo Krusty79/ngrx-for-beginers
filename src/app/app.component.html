@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=a0lzSwmGn_E&list=PL4rYLeYunVf1m8MDjmM_hzK9ex7ng_v-5&index=3<br/>
 <button [disabled]="cannotDecrease" class="fz-60 p-50 m-20" (click)="decrease()">-1</button>
 <button class="fz-60 p-50 m-20" (click)="increase()">+1</button>
-<button class="fz-60 p-50 m-20" (click)="clear()">=0</button>
+<button [disabled]="cannotDecrease" class="fz-60 p-50 m-20" (click)="clear()">=0</button>
 
 <p class="fz-60">Counter = {{ counter }}</p>
 <p class="fz-60" *ngIf="updatedAt">updatedAt: {{ updatedAt | date :"HH:mm:ss dd/MM/yyyy" }}</p>
