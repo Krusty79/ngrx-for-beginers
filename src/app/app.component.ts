@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngrx-for-beginers';
+
+  counter: number = 0;
+  updatedAt?: number;
+
+  get cannotDecrease(): boolean {
+    return this.counter <= 0;
+  }
+
+  increase(): void {
+    this.updatedAt = Date.now();
+    this.counter++;
+  }
+  decrease(): void {
+    this.updatedAt = Date.now();
+    this.counter--;
+  }
+  clear(): void {
+    this.updatedAt = Date.now();
+    this.counter=0;
+  }
 }
