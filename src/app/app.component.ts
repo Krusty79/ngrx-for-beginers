@@ -12,19 +12,17 @@ export class AppComponent {
   updatedAt?: number;
 
   get cannotDecrease(): boolean {
+    this.updatedAt = Date.now();
     return this.counter <= 0;
   }
 
   increase(): void {
-    this.updatedAt = Date.now();
     this.counter++;
   }
   decrease(): void {
-    this.updatedAt = Date.now();
     this.counter--;
   }
   clear(): void {
-    this.updatedAt = Date.now();
     this.counter=0;
   }
 }
